@@ -2,4 +2,18 @@
   border: 1px solid black;
 }
 
+.all-pads {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 500px;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.all-pads .drum-pad {
+  width: 100px;
+  height: 100px;
+}
+
 /*# sourceMappingURL=main.css.map */
