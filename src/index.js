@@ -53,6 +53,21 @@ function handleKeyPress(e) {
     let audio = document.getElementById(pressedKey);
     console.log("audio=", audio);
 
+    // Print the name of the audio file into the div element with the id of "display"
+    let srcValue = audio.getAttribute("src");
+    // console.log("value=", srcValue);
+    const regex = /\/.*\./g;
+    const found = srcValue.match(regex);
+    // console.log("found=", found);
+    let foundString = found[0];
+    let fileTitle = foundString.slice(0+1, foundString.length-1);
+    // console.log("fileTitle=", fileTitle);
+    let display = document.getElementById("display");
+    display.textContent = fileTitle;
+
+
+
+
     audio.play();
     
 
@@ -80,33 +95,35 @@ useEffect( ()=>{
 
 return (
     <div id="drum-machine" >
-        <div id="display">{display}</div>
+        <div id="wrapDisplay">
+            <div id="display">{display}</div>
+        </div>
         <div className="all-pads" >
-            <div id="header-1" className="drum-pad" onClick={playAudioClip}> Q 
+            <div id="heater-1" className="drum-pad" onClick={playAudioClip}> Q 
                 <audio src="sounds/Heater-1.mp3" id="Q" className="clip"></audio>
             </div>
-            <div id="uniqueId" className="drum-pad" onClick={playAudioClip}> W
+            <div id="heater-2" className="drum-pad" onClick={playAudioClip}> W
                 <audio src="sounds/Heater-2.mp3" id="W" className="clip"></audio>
             </div>
-            <div id="uniqueId" className="drum-pad" onClick={playAudioClip}> E
+            <div id="heater-3" className="drum-pad" onClick={playAudioClip}> E
                 <audio src="sounds/Heater-3.mp3" id="E" className="clip"></audio>
             </div>
-            <div id="uniqueId" className="drum-pad" onClick={playAudioClip}> A
+            <div id="heater-4" className="drum-pad" onClick={playAudioClip}> A
                 <audio src="sounds/Heater-4.mp3" id="A" className="clip"></audio>
             </div>
-            <div id="uniqueId" className="drum-pad" onClick={playAudioClip}> S
+            <div id="clap" className="drum-pad" onClick={playAudioClip}> S
                 <audio src="sounds/Clap.mp3" id="S" className="clip"></audio>
             </div>
-            <div id="uniqueId" className="drum-pad" onClick={playAudioClip}> D
+            <div id="open-hh" className="drum-pad" onClick={playAudioClip}> D
                 <audio src="sounds/Open_HH.mp3" id="D" className="clip"></audio>
             </div>
-            <div id="uniqueId" className="drum-pad" onClick={playAudioClip}> Z
+            <div id="kick-and-hat" className="drum-pad" onClick={playAudioClip}> Z
                 <audio src="sounds/Kick_and_Hat.mp3" id="Z" className="clip"></audio>
             </div>
-            <div id="uniqueId" className="drum-pad" onClick={playAudioClip}> X
+            <div id="kick" className="drum-pad" onClick={playAudioClip}> X
                 <audio src="sounds/Kick.mp3" id="X" className="clip"></audio>
             </div>
-            <div id="uniqueId" className="drum-pad" onClick={playAudioClip}> C
+            <div id="close-hh" className="drum-pad" onClick={playAudioClip}> C
                 <audio src="sounds/Close_HH.mp3" id="C" className="clip"></audio>
             </div>
         </div>
