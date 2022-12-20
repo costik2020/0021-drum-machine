@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "./style/main.css";
 import {useEffect} from 'react';
+import {useState} from  'react';
+
 
 // import './index.css';
 // import App from './App';
@@ -16,7 +18,24 @@ function playAudioClip(e){
 
     let audio = document.getElementById(clickedKey);
     console.log("audio=", audio);
+   
+    // Print the name of the audio file into the div element with the id of "display"
+    let srcValue = audio.getAttribute("src");
+    // console.log("value=", srcValue);
+    const regex = /\/.*\./g;
+    const found = srcValue.match(regex);
+    // console.log("found=", found);
+    let foundString = found[0];
+    let fileTitle = foundString.slice(0+1, foundString.length-1);
+    // console.log("fileTitle=", fileTitle);
+    let display = document.getElementById("display");
+    display.textContent = fileTitle;
 
+
+
+
+
+    // Play the audio file sound through the earphones
     audio.play();
     
 
@@ -46,6 +65,9 @@ function handleKeyPress(e) {
 
 function DrumMachine () {
 
+const [display, setDisplay] = useState("...");
+
+
 // Detect what key was pressed 
 useEffect( ()=>{
     document.addEventListener("keydown", handleKeyPress, true);
@@ -58,7 +80,7 @@ useEffect( ()=>{
 
 return (
     <div id="drum-machine" >
-        <div id="display"></div>
+        <div id="display">{display}</div>
         <div className="all-pads" >
             <div id="header-1" className="drum-pad" onClick={playAudioClip}> Q 
                 <audio src="sounds/Heater-1.mp3" id="Q" className="clip"></audio>

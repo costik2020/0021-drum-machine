@@ -2,6 +2,10 @@
   border: 1px solid black;
 }
 
+#display {
+  text-align: center;
+}
+
 .all-pads {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
