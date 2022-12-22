@@ -62,21 +62,14 @@ body
   justify-items: center
   align-items: center
 
-#display 
-  //text-align: center
-  width: 400px
-  height: 50px
-
-
 #display
   // border: 2px solid blue
-  text-align: right
-  padding: 5px
-  height: 5rem
+  padding-top: 2rem
+  width: 400px
+  height: 4rem
   font-family: codystarregular, bpdotsregular, regular
   font-size: 2rem
   font-weight: bold
-  padding-top: 1rem
 
 
 
@@ -95,6 +88,8 @@ body
   padding: 1rem
   color: $text-color 
 
+
+
 .all-pads 
   display: grid
   grid-template-columns: 1fr 1fr 1fr
@@ -111,7 +106,8 @@ body
   text-align: center
   padding: 3rem
   color: $text-color 
-
+  cursor: pointer 
+  user-select: none
 
 .all-pads .drum-pad:hover 
   border: 10px solid $border-hover-color

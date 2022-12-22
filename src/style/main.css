@@ -30,18 +30,12 @@ body {
 }
 
 #display {
+  padding-top: 2rem;
   width: 400px;
-  height: 50px;
-}
-
-#display {
-  text-align: right;
-  padding: 5px;
-  height: 5rem;
+  height: 4rem;
   font-family: codystarregular, bpdotsregular, regular;
   font-size: 2rem;
   font-weight: bold;
-  padding-top: 1rem;
 }
 
 /*Appling neon effect to text*/
@@ -73,6 +67,8 @@ body {
   text-align: center;
   padding: 3rem;
   color: #067BC2;
+  cursor: pointer;
+  user-select: none;
 }
 
 .all-pads .drum-pad:hover {
