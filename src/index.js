@@ -57,6 +57,7 @@ function handleKeyPress(e) {
     let srcValue = audio.getAttribute("src");
     // console.log("value=", srcValue);
     const regex = /\/.*\./g;
+    // const regex = /(?<=sounds\/).*(?=\.mp3)/g; 
     const found = srcValue.match(regex);
     // console.log("found=", found);
     let foundString = found[0];
