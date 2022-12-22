@@ -1,12 +1,19 @@
 * 
   border: 1px solid black
+  box-sizing: border-box
+
+
+.drum-machine-title 
+  color: red
+  text-align: center
+
 
 
 
 #wrapDisplay
-  border: 5px solid red
+  // border: 5px solid red
   display: grid
-  width: 500px
+  width: 600px
   margin: auto
   grid-template-columns: 1fr
   justify-items: center
@@ -18,10 +25,15 @@
   height: 50px
 
 
+#wrapDisplay #display 
+  text-align: center
+  padding: 1rem
+
+
 .all-pads 
   display: grid
   grid-template-columns: 1fr 1fr 1fr
-  width: 500px
+  width: 600px
   margin: auto
   justify-items: center
   align-items: center
@@ -29,9 +41,19 @@
 .all-pads .drum-pad 
   width: 200px
   height: 200px
+  font-size: 5rem
+  text-align: center
 
 
 
+.all-pads .drum-pad:hover 
+  border: 5px solid red
+
+
+
+#drum-machine .all-pads .drum-pad:active 
+  border: 5px solid yellow
+  background: yellow
 
 // Add images for the drum pads 
 

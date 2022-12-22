@@ -95,6 +95,8 @@ useEffect( ()=>{
 
 return (
     <div id="drum-machine" >
+
+        <h1 className="drum-machine-title">Drum Machine</h1>
         <div id="wrapDisplay">
             <div id="display">{display}</div>
         </div>
