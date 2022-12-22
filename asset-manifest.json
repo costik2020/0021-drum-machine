@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/0021-drum-machine/static/css/main.c5a070df.css",
+    "main.js": "/0021-drum-machine/static/js/main.19ea4bee.js",
+    "static/media/drum.png": "/0021-drum-machine/static/media/drum.aa4ba45b398bc2491226.png",
+    "static/media/codystar-regular-webfont.woff": "/0021-drum-machine/static/media/codystar-regular-webfont.a27d9e2d0881bcd3f6d9.woff",
+    "static/media/clap.png": "/0021-drum-machine/static/media/clap.86f9cd74fa607a79c1ef.png",
+    "static/media/guitar.png": "/0021-drum-machine/static/media/guitar.46cfe6619559c300a7f5.png",
+    "index.html": "/0021-drum-machine/index.html",
+    "main.c5a070df.css.map": "/0021-drum-machine/static/css/main.c5a070df.css.map",
+    "main.19ea4bee.js.map": "/0021-drum-machine/static/js/main.19ea4bee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5a070df.css",
+    "static/js/main.19ea4bee.js"
+  ]
+}
