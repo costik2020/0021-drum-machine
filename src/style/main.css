@@ -79,6 +79,11 @@ body {
   background: #F37748;
 }
 
+#drum-machine .all-pads .javascriptActiveEffect {
+  background: #F37748;
+  border: 10px solid #D56062;
+}
+
 #heater-1, #heater-2, #heater-3, #heater-4 {
   background-image: url("../images/guitar.png");
   background-size: cover;
@@ -92,6 +97,42 @@ body {
 #open-hh, #kick-and-hat, #kick, #close-hh {
   background-image: url("../images/drum.png");
   background-size: cover;
+}
+
+@media all and (max-width: 650px) {
+  #wrapDisplay {
+    width: 300px;
+  }
+  #display {
+    padding: 0rem;
+    width: 200px;
+    height: 3rem;
+    font-size: 1rem;
+  }
+  #wrapDisplay #display {
+    text-align: center;
+    padding: 1rem;
+    color: #067BC2;
+  }
+  .all-pads {
+    width: 300px;
+  }
+  .all-pads .drum-pad {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+  .all-pads .drum-pad:hover {
+    border: 5px solid #D56062;
+  }
+  #drum-machine .all-pads .drum-pad:active {
+    background: #F37748;
+  }
+  #drum-machine .all-pads .javascriptActiveEffect {
+    background: #F37748;
+    border: 5px solid #D56062;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

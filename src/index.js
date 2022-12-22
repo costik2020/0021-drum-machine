@@ -47,11 +47,11 @@ function handleKeyPress(e) {
     //console.log( "You pressed a key." );
     //console.log("e.key", e.key);
 
-    console.log("You pressed=", e.key);
+    // console.log("You pressed=", e.key);
 
     let pressedKey = e.key.toUpperCase();
     let audio = document.getElementById(pressedKey);
-    console.log("audio=", audio);
+    // console.log("audio=", audio);
 
     // Print the name of the audio file into the div element with the id of "display"
     let srcValue = audio.getAttribute("src");
@@ -67,6 +67,15 @@ function handleKeyPress(e) {
 
 
 
+    // Add active effect 
+    let drumPad = audio.parentNode;
+    
+    drumPad.classList.add("javascriptActiveEffect");
+    setTimeout(() => {
+
+        drumPad.classList.remove("javascriptActiveEffect");
+    }, 200)
+    
 
     audio.play();
     

@@ -117,6 +117,17 @@ body
 #drum-machine .all-pads .drum-pad:active 
   background: $background-active-color
 
+
+// Define the clases for when I press a keyboard key 
+// And I will add/remove these clases with javascript 
+
+#drum-machine .all-pads .javascriptActiveEffect 
+   background: $background-active-color
+   border: 10px solid $border-hover-color
+ 
+
+
+
 // Add images for the drum pads 
 
 #heater-1, #heater-2, #heater-3, #heater-4 
@@ -137,9 +148,55 @@ body
 
 
 
+// Phone responsiveness
+
+@media all and (max-width: 650px)  
+  #wrapDisplay
+    // border: 5px solid red
+    width: 300px
+
+  #display
+    // border: 5px solid red
+    padding: 0rem
+    width: 200px
+    height: 3rem
+    font-size: 1rem
+
+
+  #wrapDisplay #display 
+    text-align: center
+    padding: 1rem
+    color: $text-color 
 
 
 
+  .all-pads 
+    width: 300px
+
+  .all-pads .drum-pad 
+    width: 100px
+    height: 100px
+    font-size: 2.5rem
+    padding: 1.5rem
+
+
+
+  .all-pads .drum-pad:hover 
+    border: 5px solid $border-hover-color
+
+
+
+  #drum-machine .all-pads .drum-pad:active 
+    background: $background-active-color
+
+
+  // Define the clases for when I press a keyboard key 
+  // And I will add/remove these clases with javascript 
+
+  #drum-machine .all-pads .javascriptActiveEffect 
+    background: $background-active-color
+    border: 5px solid $border-hover-color
+  
 
 
 
