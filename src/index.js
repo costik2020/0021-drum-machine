@@ -12,12 +12,12 @@ import {useState} from  'react';
 
 function playAudioClip(e){
     
-    console.log("e.target.textContent=", e.target.textContent);
+    // console.log("e.target.textContent=", e.target.textContent);
     let clickedKey = e.target.textContent.trim();
-    console.log("clickedKey=", clickedKey);
+    // console.log("clickedKey=", clickedKey);
 
     let audio = document.getElementById(clickedKey);
-    console.log("audio=", audio);
+    // console.log("audio=", audio);
    
     // Print the name of the audio file into the div element with the id of "display"
     let srcValue = audio.getAttribute("src");
