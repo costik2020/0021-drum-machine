@@ -1,17 +1,60 @@
+
+// Defining the palete
+// $background-color: #FFFFFF 
+// $text-color: #72705B
+// $border-color: #3A5683 
+// 
+// $border-hover-color: #51CB20 
+// $background-active-color: $border-hover-color
+
+
+@font-face 
+    font-family: 'codystarregular'
+    src: url('../fonts/codystar-fontfacekit/web fonts/codystar_regular_macroman/codystar-regular-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+
+
+
+$background-color: #FFFFFF 
+$text-color: #067BC2 
+$display-fg: #067BC2
+$display-bg: black
+$border-color: #ECC30B  
+
+$border-hover-color:  #D56062  
+$background-active-color: #F37748 
+
+
+
+
+
 * 
-  border: 1px solid black
+  fffborder: 1px solid $border-color
   box-sizing: border-box
+  font-family: sans-serif
+
+
+
+
+
+body 
+  background: $background-color
+
 
 
 .drum-machine-title 
-  color: red
+  color: $text-color 
   text-align: center
-
+  
 
 
 
 #wrapDisplay
   // border: 5px solid red
+
+  background: $display-bg
   display: grid
   width: 600px
   margin: auto
@@ -25,10 +68,32 @@
   height: 50px
 
 
+#display
+  // border: 2px solid blue
+  text-align: right
+  padding: 5px
+  height: 5rem
+  font-family: codystarregular, bpdotsregular, regular
+  font-size: 2rem
+  font-weight: bold
+  padding-top: 1rem
+
+
+
+/*Appling neon effect to text*/
+#display 
+  color: $display-fg
+  text-shadow:0 0 7px $display-fg, 0 0 10px $display-fg, 0 0 21px $display-fg, 0 0 42px $display-fg, 0 0 82px $display-fg, 0 0 92px $display-fg, 0 0 102px $display-fg, 0 0 151px $display-fg
+
+
+
+
+
+
 #wrapDisplay #display 
   text-align: center
   padding: 1rem
-
+  color: $text-color 
 
 .all-pads 
   display: grid
@@ -42,18 +107,19 @@
   width: 200px
   height: 200px
   font-size: 5rem
+  font-weight: bold
   text-align: center
-
+  padding: 3rem
+  color: $text-color 
 
 
 .all-pads .drum-pad:hover 
-  border: 5px solid red
+  border: 10px solid $border-hover-color
 
 
 
 #drum-machine .all-pads .drum-pad:active 
-  border: 5px solid yellow
-  background: yellow
+  background: $background-active-color
 
 // Add images for the drum pads 
 
